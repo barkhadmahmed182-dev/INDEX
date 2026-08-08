@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caalami Real Estate</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+    color:#333;
+}
+
+header{
+    background:#0d47a1;
+    color:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    position:sticky;
+    top:0;
+}
+
+header h1{
+    font-size:32px;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    margin-left:20px;
+    font-size:17px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#ff9800;
+}
+
+.hero{
+    height:100vh;
+    background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600") center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero-content{
+    color:white;
+}
+
+.hero-content h2{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:22px;
+    margin-bottom:30px;
+}
+
+.search-box{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.search-box input,
+.search-box select{
+    padding:15px;
+    width:220px;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+}
+
+.search-box button{
+    background:#ff9800;
+    color:white;
+    border:none;
+    padding:15px 35px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.search-box button:hover{
+    background:#e68900;
+}
+
+.stats{
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    background:#0d47a1;
+    color:white;
+    padding:50px 20px;
+    text-align:center;
+}
+
+.stats h2{
+    font-size:40px;
+}
+
+.stats p{
+    margin-top:10px;
+}
+
+.section-title{
+    text-align:center;
+    margin:60px 0 30px;
+    color:#0d47a1;
+    font-size:38px;
+}
+
+.properties{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+    padding:0 8% 60px;
+}
+
+.card{
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card-content h3{
+    margin-bottom:10px;
+}
+
+.price{
+    color:red;
+    font-size:24px;
+    font-weight:bold;
+    margin:15px 0;
+}
+
+.card button{
+    background:#0d47a1;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+footer{
+    background:#0d47a1;
+    color:white;
+    text-align:center;
+    padding:40px;
+}
+
+footer h2{
+    margin-bottom:10px;
+}
+
+footer p{
+    margin:6px 0;
+}
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+}
+
+nav{
+margin-top:15px;
+}
+
+.hero-content h2{
+font-size:38px;
+}
+
+.hero-content p{
+font-size:18px;
+}
+
+.search-box input,
+.search-box select,
+.search-box button{
+width:100%;
+}
+
+.stats{
+flex-direction:column;
+gap:25px;
+}
+
+}
+</style>
+
+</head>
+<body>
+
+<header>
+
+<h1>Caalami Real Estate</h1>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Properties</a>
+<a href="#">Buy</a>
+<a href="#">Rent</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h2>Find Your Dream Property</h2>
+
+<p>Buy • Sell • Rent Houses, Apartments & Land</p>
+
+<div class="search-box">
+
+<input type="text" placeholder="Search Location">
+
+<select>
+<option>Property Type</option>
+<option>House</option>
+<option>Villa</option>
+<option>Apartment</option>
+<option>Land</option>
+<option>Office</option>
+<option>Gawaadhi</option>
+</select>
+
+<select>
+<option>Price Range</option>
+<option>$20,000 - $50,000</option>
+<option>$50,000 - $100,000</option>
+<option>$100,000+</option>
+</select>
+
+<button>Search</button>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="stats">
+
+<div>
+<h2>500+</h2>
+<p>Properties</p>
+</div>
+
+<div>
+<h2>300+</h2>
+<p>Happy Clients</p>
+</div>
+
+<div>
+<h2>50+</h2>
+<p>Professional Agents</p>
+</div>
+
+<div>
+<h2>15+</h2>
+<p>Years Experience</p>
+</div>
+
+</section>
+
+<h2 class="section-title">Featured Properties</h2>
+
+<section class="properties">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0?w=800" alt="Luxury Villa">
+
+<div class="card-content">
+<h3>Luxury Villa</h3>
+<img= "image-removebg-preview">
+<p>📍 Hargeisa, Somaliland</p>
+<p class="price">$250,000</p>
+<button>View Details</button>
+</div>
+
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800" alt="Apartment">
+
+<div class="card-content">
+<h3>Modern Apartment</h3>
+<p>📍 Hargeisa, Somaliland</p>
+<p class="price">$120,000</p>
+<button>View Details</button>
+</div>
+
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800" alt="Family House">
+
+<div class="card-content">
+<h3>Family House</h3>
+<p>📍 Berbera, Somaliland</p>
+<p class="price">$180,000</p>
+<button>View Details</button>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2>Caalami Real Estate</h2>
+
+<p>Buy • Sell • Rent • Property Management</p>
+
+<p>📧 Email: caalamirealestate@gmail.com</p>
+
+<p>📞 Phone: +252 63 XXX XXXX</p>
+
+<p>📍 Hargeisa, Somaliland</p>
+
+<p>&copy; 2026 Caalami Real Estate. All Rights Reserved.</p>
+
+</footer>
+
+</body>
+</html>
